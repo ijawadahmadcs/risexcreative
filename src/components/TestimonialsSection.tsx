@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { FaStar } from "react-icons/fa";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -26,9 +26,12 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-24 bg-gray-900 relative overflow-hidden">
+    <section
+      id="testimonials"
+      className="py-24 bg-gray-900 relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4">
-        {/* Section Title */}
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,23 +59,22 @@ const TestimonialsSection = () => {
               whileHover={{ y: -10 }}
               className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-red-600 transition-all duration-500 shadow-xl group"
             >
-              {/* Quote Marks */}
+              {/* Quote Mark */}
               <div className="absolute top-5 left-6 text-red-600 text-5xl font-serif opacity-20 select-none">
                 “
               </div>
 
-              {/* Stars */}
+              {/* Rating */}
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
+                  <FaStar
                     key={i}
-                    size={20}
-                    className="text-yellow-400 fill-yellow-400"
+                    className="text-yellow-400 text-lg drop-shadow-[0_0_5px_rgba(250,204,21,0.6)]"
                   />
                 ))}
               </div>
 
-              {/* Testimonial Text */}
+              {/* Text */}
               <p className="text-gray-300 mb-6 italic leading-relaxed relative z-10">
                 {testimonial.text}
               </p>

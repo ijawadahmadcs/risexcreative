@@ -1,9 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Rocket, Palette, Code, TrendingUp, Menu, X, Mail, Phone, MapPin, Instagram, Linkedin, MessageSquare, ChevronRight, Star, Check } from 'lucide-react';
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 
-// Navigation Component
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -17,10 +16,17 @@ const Navbar = () => {
   const navLinks = ['Home', 'About', 'Services', 'Portfolio', 'Contact'];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-900/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-gray-900/95 backdrop-blur-lg shadow-lg'
+          : 'bg-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <motion.div 
+          {/* Logo */}
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="text-2xl font-bold"
@@ -46,8 +52,11 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-white">
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-white"
+          >
+            {isOpen ? <RiCloseLine size={26} /> : <RiMenu3Line size={26} />}
           </button>
         </div>
       </div>
@@ -77,4 +86,5 @@ const Navbar = () => {
     </nav>
   );
 };
-export default Navbar;  
+
+export default Navbar;

@@ -16,7 +16,7 @@ const TeamSection = () => {
       img: '/team2.jpg',
     },
     {
-      name: 'Sophia Patel',
+      name: 'Sahir Patel',
       role: 'UI/UX Designer',
       img: '/team3.jpg',
     },

@@ -1,9 +1,14 @@
-import React from 'react'
+'use client';
+import React from 'react';
 import { motion } from "framer-motion";
-import { ChevronRight } from 'lucide-react';
+import { RiArrowDownSLine } from 'react-icons/ri'; // 👈 Replaced ChevronRight
+
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-red-900">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-red-900"
+    >
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -24,13 +29,14 @@ const HeroSection = () => {
         />
       </div>
 
+      {/* Hero Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.h1 
+          <motion.h1
             className="text-5xl md:text-7xl font-bold text-white mb-6"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -38,7 +44,7 @@ const HeroSection = () => {
           >
             Turning Ideas Into Reality
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -54,7 +60,8 @@ const HeroSection = () => {
             transition={{ delay: 0.6 }}
             className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto"
           >
-            We don`t just build brands — we make them <span className="text-red-600 font-semibold">Rise</span>
+            We don’t just build brands — we make them{" "}
+            <span className="text-red-600 font-semibold">Rise</span>
           </motion.p>
 
           <motion.div
@@ -63,10 +70,16 @@ const HeroSection = () => {
             transition={{ delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <a href="#contact" className="px-8 py-4 bg-red-600 text-white rounded-full font-semibold hover:bg-red-700 transition-all hover:scale-105 shadow-lg shadow-red-600/50">
+            <a
+              href="#contact"
+              className="px-8 py-4 bg-red-600 text-white rounded-full font-semibold hover:bg-red-700 transition-all hover:scale-105 shadow-lg shadow-red-600/50"
+            >
               Get Started
             </a>
-            <a href="#services" className="px-8 py-4 bg-white/10 backdrop-blur-lg text-white rounded-full font-semibold hover:bg-white/20 transition-all hover:scale-105 border border-white/20">
+            <a
+              href="#services"
+              className="px-8 py-4 bg-white/10 backdrop-blur-lg text-white rounded-full font-semibold hover:bg-white/20 transition-all hover:scale-105 border border-white/20"
+            >
               Explore Services
             </a>
           </motion.div>
@@ -79,10 +92,10 @@ const HeroSection = () => {
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
-        <ChevronRight className="text-white rotate-90" size={32} />
+        <RiArrowDownSLine className="text-white" size={36} />
       </motion.div>
     </section>
   );
 };
 
-export default HeroSection
+export default HeroSection;
