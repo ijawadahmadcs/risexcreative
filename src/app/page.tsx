@@ -6,8 +6,6 @@ import PortfolioSection from "@/components/PortfolioSection";
 import ServicesSection from "@/components/ServiceCard";
 import TeamSection from "@/components/TeamSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import WhatsAppButton from "@/components/WhatsAppButton";
-
 
 export default function RiseXCreative() {
   return (
