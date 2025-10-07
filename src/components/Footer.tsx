@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaInstagram, FaLinkedinIn, FaFacebookF, FaDribbble } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaFacebookF, FaDribbble, FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -64,6 +64,7 @@ const Footer = () => {
                 { icon: <FaInstagram />, link: "#" },
                 { icon: <FaLinkedinIn />, link: "#" },
                 { icon: <FaFacebookF />, link: "#" },
+                { icon: <FaWhatsapp />, link: "https://wa.me/1234567890" },
                 { icon: <FaDribbble />, link: "#" },
               ].map((social, index) => (
                 <a
@@ -74,6 +75,8 @@ const Footer = () => {
                   {social.icon}
                 </a>
               ))}
+      
+
             </div>
           </motion.div>
         </div>

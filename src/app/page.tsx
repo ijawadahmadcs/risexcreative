@@ -21,7 +21,6 @@ export default function RiseXCreative() {
       <TestimonialsSection/>
       <ContactSection/>
     
-      <WhatsAppButton/>
     </div>
   );
 }
