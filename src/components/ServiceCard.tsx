@@ -10,47 +10,50 @@ const ServicesSection = () => {
       title: "Marketing",
       description:
         "Social media management, paid ad campaigns, and SEO strategies to boost your digital visibility.",
-      gradient: "from-red-600 to-pink-600",
+      gradient: "from-red-600 to-red-700",
     },
     {
       icon: <FaPalette />,
       title: "Designing",
       description:
         "Logo design, brand identity, and UI/UX visuals that make your audience remember you.",
-      gradient: "from-purple-600 to-red-600",
+            gradient: "from-red-600 to-red-700",
+
     },
     {
       icon: <FaCode />,
       title: "Development",
       description:
         "Custom web applications, landing pages, and scalable solutions built for performance.",
-      gradient: "from-blue-600 to-red-600",
+           gradient: "from-red-600 to-red-700",
+
     },
     {
       icon: <FaRocket />,
       title: "Startup Consultancy",
       description:
         "Business strategy, digital transformation, and growth consultation for ambitious startups.",
-      gradient: "from-orange-600 to-red-600",
+        gradient: "from-red-600 to-red-700",
+
     },
   ];
 
   return (
     <section
       id="services"
-      className="relative py-24 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden"
+      className="relative py-24 bg-gradient-to-b from-black via-gray-950 to-black overflow-hidden"
     >
       {/* Animated Background Blurs */}
       <div className="absolute inset-0">
         <motion.div
           animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 18, repeat: Infinity }}
-          className="absolute top-1/3 left-1/4 w-72 h-72 bg-red-700/10 rounded-full blur-3xl"
+          className="absolute top-1/3 left-1/4 w-72 h-72 bg-red-800/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ scale: [1.3, 1, 1.3], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 22, repeat: Infinity }}
-          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-red-800/10 rounded-full blur-3xl"
+          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-red-900/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -100,7 +103,7 @@ const ServicesSection = () => {
                 boxShadow: "0px 0px 25px rgba(220, 38, 38, 0.3)",
               }}
               transition={{ type: "spring", stiffness: 200, damping: 10 }}
-              className="relative bg-gray-900/60 backdrop-blur-md border border-gray-800 hover:border-red-600 rounded-2xl p-8 transition-all duration-300 group overflow-hidden"
+              className="relative bg-black backdrop-blur-md border border-gray-800 hover:border-red-600 rounded-2xl p-8 transition-all duration-300 group overflow-hidden"
             >
               {/* Gradient Glow Behind Icon */}
               <div

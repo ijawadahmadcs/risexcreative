@@ -69,7 +69,7 @@ const TestimonialsSection = () => {
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <FaStar
                     key={i}
-                    className="text-yellow-400 text-lg drop-shadow-[0_0_5px_rgba(250,204,21,0.6)]"
+                    className="text-red-600 text-lg drop-shadow-[0_0_5px_rgba(250,204,21,0.6)]"
                   />
                 ))}
               </div>

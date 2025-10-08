@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-gray-900/95 backdrop-blur-lg shadow-lg'
+          ? 'bg-black backdrop-blur-lg shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -31,8 +31,9 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             className="text-2xl font-bold"
           >
-            <span className="text-white">RiseX</span>
-            <span className="text-red-600"> Creative</span>
+            <span className="text-white">Rise</span>
+            <span className="text-red-600"><strong>X</strong></span>
+            <span className="text-white">Creative</span>
           </motion.div>
 
           {/* Desktop Menu */}
@@ -68,7 +69,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-gray-900/95 backdrop-blur-lg"
+            className="md:hidden bg-black backdrop-blur-lg"
           >
             {navLinks.map((link) => (
               <a

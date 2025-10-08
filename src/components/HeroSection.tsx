@@ -92,7 +92,7 @@ const HeroSection = () => {
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
-        <RiArrowDownSLine className="text-white" size={36} />
+        <RiArrowDownSLine className="text-white cursor-pointer" size={36} />
       </motion.div>
     </section>
   );

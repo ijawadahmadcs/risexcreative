@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaInstagram, FaLinkedinIn, FaFacebookF, FaDribbble, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -61,13 +61,15 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-4 text-lg">Connect With Us</h4>
             <div className="flex space-x-4">
               {[
-                { icon: <FaInstagram />, link: "#" },
+                { icon: <FaInstagram />, link: "https://www.instagram.com/risex_creative?igsh=dWhlZ2p6ODBxcGpv" },
                 { icon: <FaLinkedinIn />, link: "#" },
                 { icon: <FaFacebookF />, link: "#" },
                 { icon: <FaWhatsapp />, link: "https://wa.me/1234567890" },
-                { icon: <FaDribbble />, link: "#" },
+                // { icon: <FaDribbble />, link: "#" },
               ].map((social, index) => (
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   key={index}
                   href={social.link}
                   className="w-11 h-11 flex items-center justify-center rounded-full bg-gray-800 border border-gray-700 text-gray-400 hover:text-white hover:border-red-600 hover:bg-red-600 transition-all duration-300 transform hover:scale-110"
@@ -85,7 +87,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()}{" "}
-            <span className="text-white font-medium">RiseX Creative</span>. All rights reserved.
+            <span className="text-white font-medium">RiseXCreative</span>. All rights reserved.
           </p>
         </div>
       </div>

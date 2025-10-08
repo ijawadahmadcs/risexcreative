@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "framer-motion": "^12.23.22",
+    "mailersend": "^2.6.0",
     "next": "15.5.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-hot-toast": "^2.6.0",
     "react-icons": "^5.5.0",
     "sweetalert2": "^11.24.0",
     "sweetalert2-react-content": "^5.1.0"

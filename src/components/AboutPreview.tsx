@@ -12,7 +12,7 @@ const AboutPreview = () => {
   ];
 
   return (
-    <section id="about" className="relative py-24 bg-gradient-to-b from-gray-900 via-black to-gray-950 overflow-hidden">
+    <section id="about" className="relative py-24 bg-gradient-to-b from-black via-black to-gray-950 overflow-hidden">
       {/* Animated Blurred Background */}
       <div className="absolute inset-0">
         <motion.div
@@ -46,7 +46,7 @@ const AboutPreview = () => {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="text-lg text-gray-300 max-w-3xl mx-auto mb-6"
         >
-          We’re not just a digital agency — we’re your creative growth partner.
+          We`re not just a digital agency — we`re your creative growth partner.
           At <span className="text-red-600 font-semibold">RiseX Creative</span>,
           we turn your ideas into impactful digital experiences through design, code, and strategy.
         </motion.p>
@@ -91,13 +91,13 @@ const AboutPreview = () => {
         </motion.div>
 
         {/* Button */}
-        <motion.a
+        {/* <motion.a
           href="#services"
           whileHover={{ scale: 1.07 }}
           className="inline-block px-10 py-4 bg-red-600 text-white rounded-full font-semibold hover:bg-red-700 transition-all shadow-lg shadow-red-700/40"
         >
           Explore Our Services
-        </motion.a>
+        </motion.a> */}
       </div>
     </section>
   );
