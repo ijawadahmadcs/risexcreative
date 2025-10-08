@@ -50,7 +50,7 @@ const ServicesSection = () => {
         <motion.div
           animate={{ scale: [1.3, 1, 1.3], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 22, repeat: Infinity }}
-          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-red-600/10 rounded-full blur-3xl"
+          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-red-800/10 rounded-full blur-3xl"
         />
       </div>
 

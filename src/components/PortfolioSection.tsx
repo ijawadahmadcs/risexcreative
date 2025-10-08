@@ -14,7 +14,7 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-gray-900 relative overflow-hidden">
+    <section id="portfolio" className="py-20 bg-gray-950 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -42,7 +42,7 @@ const PortfolioSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-red-600 transition-all duration-500 group shadow-lg"
+              className="relative bg-gradient-to-br from-gray-900 to-gray-950 p-8 rounded-2xl border border-gray-700 hover:border-red-600 transition-all duration-500 group shadow-lg"
             >
               <div className="flex flex-col items-center justify-center text-center space-y-3">
                 <span className="text-red-500 font-semibold text-sm uppercase tracking-wide">

@@ -4,7 +4,7 @@ import ContactSection from "@/components/ContactSection";
 import HeroSection from "@/components/HeroSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import ServicesSection from "@/components/ServiceCard";
-import TeamSection from "@/components/TeamSection";
+// import TeamSection from "@/components/TeamSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 export default function RiseXCreative() {
@@ -14,7 +14,7 @@ export default function RiseXCreative() {
       <HeroSection/>
       <AboutPreview/>
       <ServicesSection/>
-      <TeamSection/>
+      {/* <TeamSection/> */}
       <PortfolioSection/>
       <TestimonialsSection/>
       <ContactSection/>

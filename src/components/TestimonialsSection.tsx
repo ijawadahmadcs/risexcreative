@@ -28,7 +28,7 @@ const TestimonialsSection = () => {
   return (
     <section
       id="testimonials"
-      className="py-24 bg-gray-900 relative overflow-hidden"
+      className="py-24 bg-black relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
               whileHover={{ y: -10 }}
-              className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-red-600 transition-all duration-500 shadow-xl group"
+              className="relative bg-black p-8 rounded-2xl border border-gray-700 hover:border-red-600 transition-all duration-500 shadow-xl group"
             >
               {/* Quote Mark */}
               <div className="absolute top-5 left-6 text-red-600 text-5xl font-serif opacity-20 select-none">

@@ -17,7 +17,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-900 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-gray-950 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -50,17 +50,17 @@ const ContactSection = () => {
                 {
                   icon: <FaEnvelope size={20} />,
                   label: "Email",
-                  value: "info@risexcreative.com",
+                  value: "risexcreative@gmail.com",
                 },
                 {
                   icon: <FaPhoneAlt size={20} />,
                   label: "Phone",
-                  value: "+1 (555) 123-4567",
+                  value: "057 0000000",
                 },
                 {
                   icon: <FaMapMarkerAlt size={20} />,
                   label: "Location",
-                  value: "Global Remote Team",
+                  value: "Islamabad, Pakistan",
                 },
               ].map((item, index) => (
                 <div key={index} className="flex items-center space-x-4">
@@ -100,7 +100,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-gray-800/40 p-8 rounded-2xl border border-gray-700 shadow-xl backdrop-blur-sm">
+            <div className="bg-gray-900/40 p-8 rounded-2xl border border-gray-800 shadow-xl backdrop-blur-sm">
               <div className="space-y-4">
                 <input
                   type="text"

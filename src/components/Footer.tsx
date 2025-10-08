@@ -4,7 +4,7 @@ import { FaInstagram, FaLinkedinIn, FaFacebookF, FaDribbble, FaWhatsapp } from "
 import { motion } from "framer-motion";
 
 const Footer = () => {
-  const quickLinks = ["Home", "About", "Services", "Portfolio", "Contact"];
+  // const quickLinks = ["Home", "About", "Services", "Portfolio", "Contact"];
 
   return (
     <footer className="bg-black py-16 border-t border-gray-800 relative overflow-hidden">
@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-red-600/10 to-transparent opacity-30 blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mb-10">
           {/* Brand Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -28,7 +28,7 @@ const Footer = () => {
             </p>
           </motion.div>
 
-          {/* Quick Links */}
+          {/* Quick Links
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </motion.div> */}
 
           {/* Social Icons */}
           <motion.div
