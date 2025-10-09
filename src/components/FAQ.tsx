@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, PlayCircle } from "lucide-react";
+import { FaChevronDown, FaPlayCircle } from "react-icons/fa";
 
 const faqs = [
   {
@@ -76,7 +76,7 @@ export default function FAQ() {
                     animate={{ rotate: openIndex === index ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <ChevronDown className="text-red-600" />
+                    <FaChevronDown className="text-red-600" />
                   </motion.div>
                 </button>
 
@@ -103,7 +103,7 @@ export default function FAQ() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="relative rounded-2xl overflow-hidden group shadow-red-600/30 shadow-lg border-2"
+          className="relative rounded-2xl overflow-hidden group shadow-red-600/30 shadow-lg border-2 border-gray-800"
         >
           <video
             id="promoVideo"
@@ -124,7 +124,7 @@ export default function FAQ() {
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center justify-center"
               >
-                <PlayCircle
+                <FaPlayCircle
                   size={90}
                   className="text-red-600 opacity-90 hover:opacity-100 transition"
                 />

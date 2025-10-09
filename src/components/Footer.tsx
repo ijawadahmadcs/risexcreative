@@ -21,7 +21,7 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-3xl font-bold text-white mb-3 tracking-tight">
-              RiseX <span className="text-red-600">Creative</span>
+              Rise<span className="text-red-600"><strong>X</strong></span>Creative
             </h3>
             <p className="text-gray-400 leading-relaxed">
               Empowering brands through design, innovation, and strategy — your growth partner in the digital world.
