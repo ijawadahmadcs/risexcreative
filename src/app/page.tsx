@@ -1,6 +1,7 @@
 'use client';
 import AboutPreview from "@/components/AboutPreview";
 import ContactSection from "@/components/ContactSection";
+import FAQ from "@/components/FAQ";
 import HeroSection from "@/components/HeroSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import ServicesSection from "@/components/ServiceCard";
@@ -17,6 +18,7 @@ export default function RiseXCreative() {
       {/* <TeamSection/> */}
       <PortfolioSection/>
       <TestimonialsSection/>
+      <FAQ/>
       <ContactSection/>
     
     </div>
