@@ -141,9 +141,9 @@ const ServicesSection: React.FC = () => {
               OUR EXPERTISE
             </span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Services We
-            <span className="block text-red-600">
+          <h2 className="text-5xl md:text-5xl font-bold text-white mb-6">
+            Services We- 
+            <span className="text-red-600">
               Excel At
             </span>
           </h2>

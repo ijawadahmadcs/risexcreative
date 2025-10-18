@@ -72,7 +72,7 @@ const AboutPreview = () => {
         </motion.p>
 
         {/* Core Services */}
-        <motion.div
+        {/* <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -95,7 +95,7 @@ const AboutPreview = () => {
               <p className="text-gray-400 text-sm">{feature.desc}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* Why Choose Us */}
         <motion.div

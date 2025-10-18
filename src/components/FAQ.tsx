@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronDown, FaPlayCircle } from "react-icons/fa";
@@ -39,13 +40,7 @@ export default function FAQ() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const handlePlay = () => {
-    const video = document.getElementById("promoVideo") as HTMLVideoElement | null;
-    if (video) {
-      video.play();
-      setIsPlaying(true);
-    }
-  };
+  const handlePlay = () => setIsPlaying(true);
 
   return (
     <section id="faq" className="py-24 bg-black relative overflow-hidden">
@@ -80,12 +75,14 @@ export default function FAQ() {
                   </motion.div>
                 </button>
 
-                <AnimatePresence>
+                <AnimatePresence mode="wait">
                   {openIndex === index && (
                     <motion.div
+                      key={faq.question}
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
                       className="overflow-hidden mt-3 text-gray-400"
                     >
                       <p>{faq.answer}</p>
@@ -97,7 +94,7 @@ export default function FAQ() {
           </div>
         </motion.div>
 
-        {/* Cinematic Video Section */}
+        {/* Cinematic YouTube Video Section */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -105,19 +102,9 @@ export default function FAQ() {
           viewport={{ once: true }}
           className="relative rounded-2xl overflow-hidden group shadow-red-600/30 shadow-lg border-2 border-gray-800"
         >
-          <video
-            id="promoVideo"
-            className="w-full h-auto rounded-2xl object-cover"
-            muted
-            loop
-            playsInline
-          >
-            <source src="/video/company-promo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-
+          {/* Play Overlay */}
           {!isPlaying && (
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex items-center justify-center z-10">
               <motion.button
                 onClick={handlePlay}
                 whileHover={{ scale: 1.1 }}
@@ -131,6 +118,29 @@ export default function FAQ() {
               </motion.button>
             </div>
           )}
+
+          {/* YouTube Embed */}
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+            {isPlaying ? (
+              <motion.iframe
+                key="video"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/rWIhM7tiKqs?si=PgHjKqjZPUz2CQRk"
+                title="RiseX Company Promo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></motion.iframe>
+            ) : (
+              <img
+                src="https://img.youtube.com/vi/YOUR_VIDEO_ID/hqdefault.jpg"
+                alt="Promo Thumbnail"
+                className="w-full h-full object-cover"
+              />
+            )}
+          </div>
         </motion.div>
       </div>
     </section>
