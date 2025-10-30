@@ -8,43 +8,84 @@ const allProjects = [
     title: "E-Commerce Platform",
     category: "Development",
     tags: ["Next.js", "Stripe", "Tailwind"],
-    image: "/projects/ecommerce.jpg",
-    description: "A full-featured online store with secure payments and modern UI.",
+    image: "/images/shirts.jpg",
+    description:
+      "A full-featured online store with secure payments and modern UI.",
   },
   {
     title: "Brand Identity Design",
     category: "Design",
     tags: ["Figma", "Illustrator"],
-    image: "/projects/branding.jpg",
+    image: "/images/shahstore.jpg",
     description: "Complete rebranding for a modern digital agency.",
   },
   {
     title: "Social Media Campaign",
     category: "Marketing",
     tags: ["Instagram", "Strategy"],
-    image: "/projects/social.jpg",
+    image: "/images/graphicdesign.jpg",
     description: "Creative campaign resulting in 3x engagement boost.",
   },
   {
     title: "Startup MVP",
     category: "Consultancy",
     tags: ["Product Strategy", "Pitch Deck"],
-    image: "/projects/startup.jpg",
+    image: "/images/product.jpg",
     description: "Built an MVP that secured investor funding within 2 months.",
   },
   {
     title: "Mobile App UI/UX",
     category: "Design",
     tags: ["Figma", "Prototyping"],
-    image: "/projects/mobile.jpg",
+    image: "/images/uiux.jpg",
     description: "Designed an intuitive app interface for a fitness brand.",
   },
   {
     title: "SEO Optimization",
     category: "Marketing",
     tags: ["SEO", "Google Analytics"],
-    image: "/projects/seo.jpg",
+    image: "/images/onlinewebinar.jpg",
     description: "Improved site ranking to top 3 positions on Google search.",
+  },
+  {
+    title: "AI-Powered Automation",
+    category: "Development",
+    tags: ["AI", "Automation", "Machine Learning"],
+    video: "/videos/ai.mp4",
+    description:
+      "Demonstrating an AI automation workflow that boosts efficiency and reduces manual work.",
+  },
+  {
+    title: "UI Design Showcase",
+    category: "Design",
+    tags: ["UI/UX", "Animation"],
+    video: "/videos/aiagent.mp4",
+    description:
+      "A sleek and interactive UI demonstration showcasing fluid transitions and responsive design.",
+  },
+  {
+    title: "Team Culture Highlights",
+    category: "Consultancy",
+    tags: ["Team", "Culture", "Company"],
+    video: "/videos/bestsaasvideo.mp4",
+    description:
+      "A short company culture video capturing creativity, teamwork, and innovation in action.",
+  },
+  {
+    title: "Team Culture Highlights",
+    category: "Consultancy",
+    tags: ["Team", "Culture", "Company"],
+    video: "/videos/nomorelimits.mp4",
+    description:
+      "A short company culture video capturing creativity, teamwork, and innovation in action.",
+  },
+  {
+    title: "Team Culture Highlights",
+    category: "Consultancy",
+    tags: ["Team", "Culture", "Company"],
+    video: "/videos/AnimatedVideosforTech.mp4",
+    description:
+      "A short company culture video capturing creativity, teamwork, and innovation in action.",
   },
 ];
 
@@ -79,27 +120,6 @@ const PortfolioSection = () => {
           </p>
         </motion.div>
 
-        {/* Stats */}
-        <div className="flex flex-wrap justify-center gap-8 mb-12 text-center">
-          {[
-            { label: "Projects Delivered", value: "50+" },
-            { label: "Clients Served", value: "25+" },
-            { label: "Countries", value: "10+" },
-          ].map((stat, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.2 }}
-              viewport={{ once: true }}
-              className="text-white"
-            >
-              <h3 className="text-3xl font-bold text-red-600">{stat.value}</h3>
-              <p className="text-gray-400">{stat.label}</p>
-            </motion.div>
-          ))}
-        </div>
-
         {/* Filter Buttons */}
         <div className="flex justify-center gap-4 mb-12 flex-wrap">
           {categories.map((cat) => (
@@ -128,24 +148,41 @@ const PortfolioSection = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
+              transition={{ delay: index * 0.1, type: "spring", stiffness: 80 }}
+              whileHover={{ y: -8, scale: 1.02 }}
               className="relative bg-black p-6 rounded-2xl border border-gray-800 hover:border-red-600 transition-all duration-500 group shadow-lg cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
-              {/* Preview Image */}
-              <div className="w-full h-48 bg-gray-900 rounded-xl overflow-hidden mb-4">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
-                />
+              {/* Show image OR video */}
+              <div
+                className={`w-full ${
+                  project.video ? "h-48" : "h-80"
+                } bg-gray-900 rounded-xl overflow-hidden mb-4 transition-all duration-700`}
+              >
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    className="w-full h-full object-cover"
+                    muted
+                    loop
+                    playsInline
+                    autoPlay
+                  />
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
+                  />
+                )}
               </div>
 
               <span className="text-red-500 font-semibold text-sm uppercase tracking-wide">
                 {project.category}
               </span>
-              <h3 className="text-2xl font-bold text-white mt-2">{project.title}</h3>
+              <h3 className="text-2xl font-bold text-white mt-2">
+                {project.title}
+              </h3>
               <p className="text-gray-400 text-sm mt-2">
                 {project.description.slice(0, 70)}...
               </p>
@@ -161,18 +198,11 @@ const PortfolioSection = () => {
                   </span>
                 ))}
               </div>
-
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="mt-5 inline-flex items-center gap-2 text-sm text-white bg-red-600 px-5 py-2 rounded-full font-medium shadow-md hover:bg-red-700 transition-all"
-              >
-                View Project <FaExternalLinkAlt size={14} />
-              </motion.div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Project Modal */}
+        {/* Modal */}
         <AnimatePresence>
           {selectedProject && (
             <motion.div
@@ -193,15 +223,27 @@ const PortfolioSection = () => {
                 >
                   ✕
                 </button>
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="rounded-xl mb-4"
-                />
+
+                {selectedProject.video ? (
+                  <video
+                    src={selectedProject.video}
+                    controls
+                    className="rounded-xl mb-4 w-full"
+                  />
+                ) : (
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="rounded-xl mb-4"
+                  />
+                )}
+
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {selectedProject.title}
                 </h3>
-                <p className="text-gray-400 mb-4">{selectedProject.description}</p>
+                <p className="text-gray-400 mb-4">
+                  {selectedProject.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.tags.map((tag: string, i: number) => (
                     <span
