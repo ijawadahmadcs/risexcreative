@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "How long does it take to complete a project?",
     answer:
-      "Most projects are completed within 2–4 weeks, depending on the scope and complexity. We maintain regular communication throughout the process.",
+      "Most projects are completed within 2-4 weeks, depending on the scope and complexity. We maintain regular communication throughout the process.",
   },
   {
     question: "Do you provide post-launch support?",

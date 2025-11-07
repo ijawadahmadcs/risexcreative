@@ -137,7 +137,6 @@ const PortfolioSection = () => {
           ))}
         </div>
 
-        {/* Projects Grid */}
         <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -153,7 +152,6 @@ const PortfolioSection = () => {
               className="relative bg-black p-6 rounded-2xl border border-gray-800 hover:border-red-600 transition-all duration-500 group shadow-lg cursor-pointer"
               onClick={() => setSelectedProject(project)}
             >
-              {/* Show image OR video */}
               <div
                 className={`w-full ${
                   project.video ? "h-48" : "h-80"
@@ -187,7 +185,6 @@ const PortfolioSection = () => {
                 {project.description.slice(0, 70)}...
               </p>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-2 mt-4">
                 {project.tags.map((tag: string, i: number) => (
                   <span
@@ -202,7 +199,6 @@ const PortfolioSection = () => {
           ))}
         </motion.div>
 
-        {/* Modal */}
         <AnimatePresence>
           {selectedProject && (
             <motion.div
