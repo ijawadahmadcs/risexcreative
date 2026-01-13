@@ -1,6 +1,11 @@
 "use client";
 import React from "react";
-import { FaInstagram, FaLinkedinIn, FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaFacebookF,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -18,13 +23,18 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
           >
             <h3 className="text-3xl font-bold text-white mb-3 tracking-tight">
-              Rise<span className="text-red-600"><strong>X</strong></span>Creative
+              Rise
+              <span className="text-red-600">
+                <strong>X</strong>
+              </span>
+              Creative
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              Empowering brands through design, innovation, and strategy — your growth partner in the digital world.
+              Empowering brands through design, innovation, and strategy - your
+              growth partner in the digital world.
             </p>
           </motion.div>
 
@@ -56,15 +66,21 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6 }}
+            transition={{ delay: 0.05, duration: 0.3 }}
           >
-            <h4 className="text-white font-semibold mb-4 text-lg">Connect With Us</h4>
+            <h4 className="text-white font-semibold mb-4 text-lg">
+              Connect With Us
+            </h4>
             <div className="flex space-x-4">
               {[
-                { icon: <FaInstagram />, link: "https://www.instagram.com/risex_creative?igsh=dWhlZ2p6ODBxcGpv" },
-                { icon: <FaLinkedinIn />, link: "#" },
-                { icon: <FaFacebookF />, link: "#" },
-                { icon: <FaWhatsapp />, link: "https://wa.me/1234567890" },
+                {
+                  icon: <FaInstagram />,
+                  link: "https://www.instagram.com/risex_creative?igsh=dWhlZ2p6ODBxcGpv",
+                },
+                {
+                  icon: <FaLinkedinIn />,
+                  link: "https://www.linkedin.com/company/risex-creative",
+                },
                 // { icon: <FaDribbble />, link: "#" },
               ].map((social, index) => (
                 <a
@@ -77,8 +93,6 @@ const Footer = () => {
                   {social.icon}
                 </a>
               ))}
-      
-
             </div>
           </motion.div>
         </div>
@@ -87,7 +101,8 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()}{" "}
-            <span className="text-white font-medium">RiseXCreative</span>. All rights reserved.
+            <span className="text-white font-medium">RiseXCreative</span>. All
+            rights reserved.
           </p>
         </div>
       </div>

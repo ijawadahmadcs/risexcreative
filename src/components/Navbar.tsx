@@ -1,7 +1,7 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+"use client";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,18 +9,16 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = ['Home', 'About', 'Services', 'Portfolio', 'Contact'];
+  const navLinks = ["Home", "About", "Services", "Portfolio", "Contact"];
 
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-black backdrop-blur-lg shadow-lg'
-          : 'bg-transparent'
+        scrolled ? "bg-black backdrop-blur-lg shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +30,9 @@ const Navbar = () => {
             className="text-2xl font-bold"
           >
             <span className="text-white">Rise</span>
-            <span className="text-red-600"><strong>X</strong></span>
+            <span className="text-red-600">
+              <strong>X</strong>
+            </span>
             <span className="text-white">Creative</span>
           </motion.div>
 
@@ -44,7 +44,7 @@ const Navbar = () => {
                 href={`#${link.toLowerCase()}`}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.05, duration: 0.25 }}
                 className="text-gray-300 hover:text-red-600 transition-colors duration-300"
               >
                 {link}
@@ -67,7 +67,7 @@ const Navbar = () => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-black backdrop-blur-lg"
           >

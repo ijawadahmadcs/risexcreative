@@ -1,29 +1,29 @@
-'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const TeamSection = () => {
   const team = [
     {
-      name: 'Ava Thompson',
-      role: 'Creative Director',
-      img: '/team1.jpg',
+      name: "Ava Thompson",
+      role: "Creative Director",
+      img: "/team1.jpg",
     },
     {
-      name: 'Liam Carter',
-      role: 'Lead Developer',
-      img: '/team2.jpg',
+      name: "Liam Carter",
+      role: "Lead Developer",
+      img: "/team2.jpg",
     },
     {
-      name: 'Sahir Patel',
-      role: 'UI/UX Designer',
-      img: '/team3.jpg',
+      name: "Sahir Patel",
+      role: "UI/UX Designer",
+      img: "/team3.jpg",
     },
     {
-      name: 'Ethan Rodriguez',
-      role: 'Marketing Strategist',
-      img: '/team4.jpg',
+      name: "Ethan Rodriguez",
+      role: "Marketing Strategist",
+      img: "/team4.jpg",
     },
   ];
 
@@ -53,7 +53,7 @@ const TeamSection = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.05, duration: 0.3 }}
               whileHover={{ scale: 1.05 }}
               className="relative bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-2xl border border-gray-700 shadow-xl hover:border-red-600 transition-all duration-300"
             >
@@ -68,7 +68,9 @@ const TeamSection = () => {
 
               {/* Info */}
               <div className="text-center">
-                <h3 className="text-white text-xl font-semibold">{member.name}</h3>
+                <h3 className="text-white text-xl font-semibold">
+                  {member.name}
+                </h3>
                 <p className="text-gray-400 text-sm mb-4">{member.role}</p>
 
                 {/* Social Links */}

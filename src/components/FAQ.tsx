@@ -49,7 +49,7 @@ export default function FAQ() {
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-10 text-white">
@@ -82,7 +82,7 @@ export default function FAQ() {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.2 }}
                       className="overflow-hidden mt-3 text-gray-400"
                     >
                       <p>{faq.answer}</p>
@@ -98,7 +98,7 @@ export default function FAQ() {
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
           viewport={{ once: true }}
           className="relative rounded-2xl overflow-hidden group shadow-red-600/30 shadow-lg border-2 border-gray-800"
         >
@@ -119,24 +119,26 @@ export default function FAQ() {
             </div>
           )}
 
-          {/* YouTube Embed */}
           <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
             {isPlaying ? (
               <motion.iframe
                 key="video"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.3 }}
                 className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/rWIhM7tiKqs?si=PgHjKqjZPUz2CQRk"
+                src="https://www.youtube.com/embed/rWIhM7tiKqs?autoplay=1&rel=0&modestbranding=1&playsinline=1"
                 title="RiseX Company Promo"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                loading="lazy"
                 allowFullScreen
               ></motion.iframe>
             ) : (
               <img
-                src="https://img.youtube.com/vi/YOUR_VIDEO_ID/hqdefault.jpg"
+                src="https://img.youtube.com/vi/rWIhM7tiKqs/hqdefault.jpg"
                 alt="Promo Thumbnail"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             )}

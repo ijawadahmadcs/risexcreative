@@ -109,7 +109,7 @@ const PortfolioSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.35 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -147,7 +147,11 @@ const PortfolioSection = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, type: "spring", stiffness: 80 }}
+              transition={{
+                delay: index * 0.05,
+                type: "spring",
+                stiffness: 90,
+              }}
               whileHover={{ y: -8, scale: 1.02 }}
               className="relative bg-black p-6 rounded-2xl border border-gray-800 hover:border-red-600 transition-all duration-500 group shadow-lg cursor-pointer"
               onClick={() => setSelectedProject(project)}

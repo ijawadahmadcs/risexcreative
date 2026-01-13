@@ -36,7 +36,7 @@ const TestimonialsSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.35 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -55,7 +55,7 @@ const TestimonialsSection = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15 }}
+              transition={{ delay: index * 0.05, duration: 0.3 }}
               whileHover={{ y: -10 }}
               className="relative bg-black p-8 rounded-2xl border border-gray-700 hover:border-red-600 transition-all duration-500 shadow-xl group"
             >

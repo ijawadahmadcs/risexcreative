@@ -29,8 +29,13 @@ const ServicesSection: React.FC = () => {
       title: "Marketing",
       shortDesc: "Boost your reach & engagement.",
       longDesc:
-        "We craft data-driven marketing strategies — from social media management to SEO and paid ad campaigns — that increase your brand's visibility and attract loyal customers.",
-      features: ["Social Media Management", "SEO Optimization", "Paid Campaigns", "Analytics & Reporting"],
+        "We craft data-driven marketing strategies - from social media management to SEO and paid ad campaigns - that increase your brand's visibility and attract loyal customers.",
+      features: [
+        "Social Media Management",
+        "SEO Optimization",
+        "Paid Campaigns",
+        "Analytics & Reporting",
+      ],
       gradient: "from-red-600 to-red-700",
       bgGradient: "from-red-600/10 to-red-700/10",
     },
@@ -40,7 +45,12 @@ const ServicesSection: React.FC = () => {
       shortDesc: "Crafting timeless brand identities.",
       longDesc:
         "Our design team transforms ideas into visually stunning experiences. From logos and branding to UI/UX layouts, we ensure every pixel speaks your brand's story.",
-      features: ["Brand Identity", "UI/UX Design", "Logo Design", "Digital Assets"],
+      features: [
+        "Brand Identity",
+        "UI/UX Design",
+        "Logo Design",
+        "Digital Assets",
+      ],
       gradient: "from-red-600 to-red-700",
       bgGradient: "from-red-600/10 to-red-700/10",
     },
@@ -49,8 +59,13 @@ const ServicesSection: React.FC = () => {
       title: "Development",
       shortDesc: "Building modern, fast experiences.",
       longDesc:
-        "We build responsive, high-performance websites and web apps using the latest technologies. From landing pages to full-scale systems — we deliver scalable and secure solutions.",
-      features: ["Web Development", "Mobile Apps", "API Integration", "Cloud Solutions"],
+        "We build responsive, high-performance websites and web apps using the latest technologies. From landing pages to full-scale systems - we deliver scalable and secure solutions.",
+      features: [
+        "Web Development",
+        "Mobile Apps",
+        "API Integration",
+        "Cloud Solutions",
+      ],
       gradient: "from-red-600 to-red-700",
       bgGradient: "from-red-600/10 to-red-700/10",
     },
@@ -59,8 +74,13 @@ const ServicesSection: React.FC = () => {
       title: "Startup Consultancy",
       shortDesc: "Helping startups launch & scale.",
       longDesc:
-        "We guide founders from concept to execution — providing business strategy, digital transformation advice, and actionable insights to accelerate growth.",
-      features: ["Business Strategy", "Market Research", "Growth Planning", "Funding Guidance"],
+        "We guide founders from concept to execution - providing business strategy, digital transformation advice, and actionable insights to accelerate growth.",
+      features: [
+        "Business Strategy",
+        "Market Research",
+        "Growth Planning",
+        "Funding Guidance",
+      ],
       gradient: "from-red-600 to-red-700",
       bgGradient: "from-red-600/10 to-red-700/10",
     },
@@ -87,12 +107,12 @@ const ServicesSection: React.FC = () => {
     center: {
       x: 0,
       opacity: 1,
-      transition: { duration: 0.5, ease: "easeOut" as const },
+      transition: { duration: 0.25, ease: "easeOut" as const },
     },
     exit: (dir: number) => ({
       x: dir > 0 ? -1000 : 1000,
       opacity: 0,
-      transition: { duration: 0.5, ease: "easeIn" as const },
+      transition: { duration: 0.25, ease: "easeIn" as const },
     }),
   };
 
@@ -101,8 +121,8 @@ const ServicesSection: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
+        staggerChildren: 0.04,
+        delayChildren: 0.05,
       },
     },
   };
@@ -112,7 +132,7 @@ const ServicesSection: React.FC = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: 0.25 },
     },
   };
 
@@ -133,7 +153,7 @@ const ServicesSection: React.FC = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.35 }}
           className="text-center mb-20"
         >
           <div className="inline-block mb-4 px-4 py-2 bg-red-600/20 rounded-full border border-red-600/30">
@@ -142,13 +162,12 @@ const ServicesSection: React.FC = () => {
             </span>
           </div>
           <h2 className="text-5xl md:text-5xl font-bold text-white mb-6">
-            Services We- 
-            <span className="text-red-600">
-              Excel At
-            </span>
+            Services We-
+            <span className="text-red-600">Excel At</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            From concept to execution, we deliver end-to-end solutions tailored to your business needs
+            From concept to execution, we deliver end-to-end solutions tailored
+            to your business needs
           </p>
         </motion.div>
 
@@ -185,7 +204,7 @@ const ServicesSection: React.FC = () => {
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
+                  transition={{ duration: 0.3, delay: 0.05 }}
                   className="relative group"
                 >
                   <div
@@ -243,7 +262,10 @@ const ServicesSection: React.FC = () => {
 
                   {/* CTA Button */}
                   <motion.button
-                    whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(220, 38, 38, 0.3)" }}
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 20px 40px rgba(220, 38, 38, 0.3)",
+                    }}
                     whileTap={{ scale: 0.95 }}
                     className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold py-4 rounded-xl transition-all duration-300 hover:shadow-2xl"
                   >
@@ -259,7 +281,7 @@ const ServicesSection: React.FC = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.15, duration: 0.3 }}
           className="flex justify-center mt-16 space-x-4"
         >
           {services.map((_, i) => (
